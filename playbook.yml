@@ -1,0 +1,83 @@
+# playbook.yml
+---
+- name: Generate YAML from Jinja2 template
+  hosts: localhost
+  gather_facts: no
+  become: true
+  become_user: root
+  vars:
+    version: "1.0"
+    web_image: "nginx:latest"
+    web_port: "8080"
+    db_image: "mysql:5.7"
+    db_root_password: "securepassword"
+
+  tasks:
+
+    - name: Check if /opt/docker-compose.yml is a symlink
+      stat:
+        path: /opt/docker-compose.yml
+        follow: no
+      register: docker_compose_stat
+
+    - name: Remove symlink /opt/docker-compose.yml
+      file:
+        path: /opt/docker-compose.yml
+        state: absent
+      when: docker_compose_stat.stat.islnk is defined and docker_compose_stat.stat.islnk
+
+
+    - name: Create YAML file from Jinja2 template
+      template:
+        src: templates/config_template.yml.j2
+        dest: /opt/config.yml
+
+    - name: Set permissions for config.yml
+      file:
+        path: /opt/config.yml
+        mode: '0755'
+
+    - name: Create a symbolic link
+      file:
+        src: /opt/config.yml
+        dest: /opt/docker-compose.yml
+        state: link
+
+    - name: Verify symbolic link creation
+      command: ls -l /opt/docker-compose.yml
+      register: link_check
+
+    - name: Check if the symbolic link points to the correct target
+      debug:
+        msg: "The symbolic link was created successfully and points to: {{ link_check.stdout }}"
+      when: "'-> /opt/config.yml' in link_check.stdout"
+
+    - name: Verify symbolic link creation using stat
+      stat:
+        path: /opt/docker-compose.yml
+      register: link_stat
+
+    - name: Check if the symbolic link exists
+      debug:
+        msg: "The symbolic link exists."
+      when: link_stat.stat.exists
+
+    - name: Check if the symbolic link is indeed a link
+      debug:
+        msg: "The symbolic link is valid."
+      when: link_stat.stat.islnk
+
+    - name: Check if the symbolic link points to the correct target
+      debug:
+        msg: "The symbolic link points to: {{ link_stat.stat.lnk_target }}"
+      when: link_stat.stat.lnk_target == '/opt/config.yml'
+
+    - name: Fail if the symbolic link does not point to the expected target
+      fail:
+        msg: "The symbolic link does not point to the expected target."
+      when: link_stat.stat.exists and link_stat.stat.islnk and link_stat.stat.lnk_target != '/opt/config.yml'
+
+    - name: Fail if the symbolic link does not exist
+      fail:
+        msg: "The symbolic link does not exist."
+      when: not link_stat.stat.exists

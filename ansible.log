@@ -1,0 +1,2425 @@
+2025-04-24 17:18:47,520 p=9090 u=root n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-24 17:18:47,524 p=9090 u=root n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-24 17:18:47,529 p=9090 u=root n=ansible INFO| setting up inventory plugins
+2025-04-24 17:18:47,723 p=9090 u=root n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-24 17:18:47,756 p=9090 u=root n=ansible INFO| host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:18:47,757 p=9090 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:18:47,758 p=9090 u=root n=ansible INFO| script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:18:47,759 p=9090 u=root n=ansible INFO| auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:18:47,759 p=9090 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:18:47,759 p=9090 u=root n=ansible INFO| yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:18:47,761 p=9090 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:18:47,761 p=9090 u=root n=ansible INFO| ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:18:47,761 p=9090 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:18:47,761 p=9090 u=root n=ansible INFO| toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:18:47,764 p=9090 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-24 17:18:47,773 p=9090 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-04-24 17:18:47,961 p=9090 u=root n=ansible INFO| Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+2025-04-24 17:18:47,990 p=9090 u=root n=ansible INFO| Attempting to use 'default' callback.
+2025-04-24 17:18:47,990 p=9090 u=root n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-24 17:18:47,990 p=9090 u=root n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-24 17:18:47,990 p=9090 u=root n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-24 17:18:47,990 p=9090 u=root n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-24 17:18:47,990 p=9090 u=root n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-24 17:18:47,991 p=9090 u=root n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-24 17:18:47,992 p=9090 u=root n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-24 17:18:47,992 p=9090 u=root n=ansible INFO| PLAYBOOK: playbook.yml **************************************************************************************************************
+2025-04-24 17:18:47,993 p=9090 u=root n=ansible INFO| 1 plays in playbook.yml
+2025-04-24 17:18:47,997 p=9090 u=root n=ansible INFO| PLAY [Generate YAML from Jinja2 template] *******************************************************************************************
+2025-04-24 17:18:48,020 p=9090 u=root n=ansible INFO| TASK [Check if /opt/docker-compose.yml is a symlink] ********************************************************************************
+2025-04-24 17:18:48,022 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:15
+2025-04-24 17:18:48,054 p=9090 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:18:48,057 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:18:48,091 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493 `" && echo ansible-tmp-1745515128.0822186-9093-240192606209493="` echo /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493 `" ) && sleep 0'
+2025-04-24 17:18:48,438 p=9090 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:18:48,439 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:18:48,455 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:18:48,463 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:18:48,464 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:18:48,465 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:18:48,465 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:18:48,466 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:18:48,466 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:18:48,471 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:18:48,472 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:18:48,473 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:18:48,473 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:18:48,473 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:18:48,474 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:18:48,474 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:18:48,479 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:18:48,479 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:18:48,480 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:18:48,480 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:18:48,481 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:18:48,487 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:18:48,488 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:18:48,489 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:18:48,489 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:18:48,489 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:18:48,493 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:18:48,499 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:18:48,501 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmpi6i6w2ts TO /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493/AnsiballZ_stat.py
+2025-04-24 17:18:48,504 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493/ /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:18:48,544 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:18:49,200 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515128.0822186-9093-240192606209493/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:18:49,248 p=9090 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/opt/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "atime": 1745514467.876083,
+        "attr_flags": "",
+        "attributes": [],
+        "block_size": 4096,
+        "blocks": 0,
+        "charset": "binary",
+        "ctime": 1745514467.8570826,
+        "dev": 2053,
+        "device_type": 0,
+        "executable": true,
+        "exists": true,
+        "gid": 0,
+        "gr_name": "root",
+        "inode": 12736908,
+        "isblk": false,
+        "ischr": false,
+        "isdir": false,
+        "isfifo": false,
+        "isgid": false,
+        "islnk": true,
+        "isreg": false,
+        "issock": false,
+        "isuid": false,
+        "lnk_source": "/opt/config.yml",
+        "lnk_target": "/opt/config.yml",
+        "mimetype": "inode/symlink",
+        "mode": "0777",
+        "mtime": 1745514467.8570826,
+        "nlink": 1,
+        "path": "/opt/docker-compose.yml",
+        "pw_name": "root",
+        "readable": true,
+        "rgrp": true,
+        "roth": true,
+        "rusr": true,
+        "size": 15,
+        "uid": 0,
+        "version": null,
+        "wgrp": true,
+        "woth": true,
+        "writeable": true,
+        "wusr": true,
+        "xgrp": true,
+        "xoth": true,
+        "xusr": true
+    }
+}
+2025-04-24 17:18:49,254 p=9090 u=root n=ansible INFO| TASK [Remove symlink /opt/docker-compose.yml] ***************************************************************************************
+2025-04-24 17:18:49,255 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:21
+2025-04-24 17:18:49,303 p=9090 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:18:49,303 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:18:49,339 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636 `" && echo ansible-tmp-1745515129.3365738-9110-119924317431636="` echo /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636 `" ) && sleep 0'
+2025-04-24 17:18:49,684 p=9090 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:18:49,691 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:18:49,692 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:18:49,694 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:18:49,696 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:18:49,697 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:18:49,699 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:18:49,700 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:18:49,703 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:18:49,704 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:18:49,706 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:18:49,708 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:18:49,709 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:18:49,712 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:18:49,714 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:18:49,716 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:18:49,720 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:18:49,722 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:18:49,725 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:18:49,726 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:18:49,726 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:18:49,726 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:18:49,726 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:18:49,726 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:18:49,726 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:18:49,727 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:18:49,727 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:18:49,727 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:18:49,727 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmp_om075gw TO /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636/AnsiballZ_file.py
+2025-04-24 17:18:49,728 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636/ /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:49,763 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:50,247 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515129.3365738-9110-119924317431636/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:18:50,290 p=9090 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        }
+    },
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "path": "/opt/docker-compose.yml",
+    "state": "absent"
+}
+2025-04-24 17:18:50,297 p=9090 u=root n=ansible INFO| TASK [Create YAML file from Jinja2 template] ****************************************************************************************
+2025-04-24 17:18:50,298 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:28
+2025-04-24 17:18:50,327 p=9090 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:18:50,330 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:18:50,361 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041 `" && echo ansible-tmp-1745515130.3573565-9125-17553469847041="` echo /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041 `" ) && sleep 0'
+2025-04-24 17:18:50,419 p=9090 u=root n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/templates/config_template.yml.j2"
+2025-04-24 17:18:50,419 p=9090 u=root n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/config_template.yml.j2"
+2025-04-24 17:18:50,441 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:18:50,448 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmpu7affy33 TO /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/AnsiballZ_stat.py
+2025-04-24 17:18:50,451 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/ /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:18:50,534 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:18:51,039 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:18:51,041 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmpys5feodg TO /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/AnsiballZ_file.py
+2025-04-24 17:18:51,041 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/ /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:51,081 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:51,638 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515130.3573565-9125-17553469847041/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:18:51,682 p=9090 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "checksum": "8eaf56d760211f7a574e6e46b5d3388676915db6",
+    "dest": "/opt/config.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "config_template.yml.j2",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/config.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-24 17:18:51,689 p=9090 u=root n=ansible INFO| TASK [Set permissions for config.yml] ***********************************************************************************************
+2025-04-24 17:18:51,690 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:33
+2025-04-24 17:18:51,715 p=9090 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:18:51,719 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:18:51,763 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010 `" && echo ansible-tmp-1745515131.7618744-9146-207592231198010="` echo /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010 `" ) && sleep 0'
+2025-04-24 17:18:51,843 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:18:51,845 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmp5dlnh3vu TO /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010/AnsiballZ_file.py
+2025-04-24 17:18:51,848 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010/ /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:51,886 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:52,371 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515131.7618744-9146-207592231198010/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:18:52,417 p=9090 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": "0755",
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-24 17:18:52,423 p=9090 u=root n=ansible INFO| TASK [Create a symbolic link] *******************************************************************************************************
+2025-04-24 17:18:52,424 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:38
+2025-04-24 17:18:52,456 p=9090 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:18:52,459 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:18:52,528 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843 `" && echo ansible-tmp-1745515132.521826-9161-233211427407843="` echo /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843 `" ) && sleep 0'
+2025-04-24 17:18:52,593 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:18:52,602 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmpd8tgs9_m TO /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843/AnsiballZ_file.py
+2025-04-24 17:18:52,606 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843/ /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:52,646 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:18:53,242 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515132.521826-9161-233211427407843/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:18:53,287 p=9090 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "dest": "/opt/docker-compose.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/docker-compose.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": "/opt/config.yml",
+            "state": "link",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0777",
+    "owner": "root",
+    "secontext": "unconfined_u:object_r:usr_t:s0",
+    "size": 15,
+    "src": "/opt/config.yml",
+    "state": "link",
+    "uid": 0
+}
+2025-04-24 17:18:53,292 p=9090 u=root n=ansible INFO| TASK [Verify symbolic link creation] ************************************************************************************************
+2025-04-24 17:18:53,293 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:44
+2025-04-24 17:18:53,323 p=9090 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:18:53,324 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:18:53,353 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305 `" && echo ansible-tmp-1745515133.3518498-9176-255782862855305="` echo /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305 `" ) && sleep 0'
+2025-04-24 17:18:53,607 p=9090 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:18:53,609 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:18:53,637 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:18:53,637 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:18:53,638 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:18:53,638 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:18:53,640 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:18:53,643 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:18:53,643 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:18:53,645 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:18:53,651 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:18:53,651 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:18:53,653 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:18:53,657 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:18:53,658 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:18:53,658 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:18:53,658 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:18:53,659 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:18:53,659 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:18:53,659 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:18:53,659 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:18:53,670 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:18:53,671 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:18:53,672 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:18:53,672 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:18:53,672 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:18:53,675 p=9090 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:18:53,683 p=9090 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/command.py
+2025-04-24 17:18:53,684 p=9090 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9090bdub26ll/tmpeyztttt1 TO /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305/AnsiballZ_command.py
+2025-04-24 17:18:53,684 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305/ /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305/AnsiballZ_command.py && sleep 0'
+2025-04-24 17:18:53,722 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305/AnsiballZ_command.py && sleep 0'
+2025-04-24 17:18:54,341 p=9090 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515133.3518498-9176-255782862855305/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:18:54,387 p=9090 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "cmd": [
+        "ls",
+        "-l",
+        "/opt/docker-compose.yml"
+    ],
+    "delta": "0:00:00.018018",
+    "end": "2025-04-24 17:18:54.280761",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls -l /opt/docker-compose.yml",
+            "_uses_shell": false,
+            "argv": null,
+            "chdir": null,
+            "creates": null,
+            "executable": null,
+            "expand_argument_vars": true,
+            "removes": null,
+            "stdin": null,
+            "stdin_add_newline": true,
+            "strip_empty_ends": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "start": "2025-04-24 17:18:54.262743",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "lrwxrwxrwx. 1 root root 15 Apr 24 17:18 /opt/docker-compose.yml -> /opt/config.yml",
+    "stdout_lines": [
+        "lrwxrwxrwx. 1 root root 15 Apr 24 17:18 /opt/docker-compose.yml -> /opt/config.yml"
+    ]
+}
+2025-04-24 17:18:54,391 p=9090 u=root n=ansible INFO| TASK [Check if the symbolic link points to the correct target] **********************************************************************
+2025-04-24 17:18:54,392 p=9090 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:48
+2025-04-24 17:18:54,440 p=9090 u=root n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link was created successfully and points to: lrwxrwxrwx. 1 root root 15 Apr 24 17:18 /opt/docker-compose.yml -> /opt/config.yml"
+}
+2025-04-24 17:18:54,443 p=9090 u=root n=ansible INFO| PLAY RECAP **************************************************************************************************************************
+2025-04-24 17:18:54,443 p=9090 u=root n=ansible INFO| localhost                  : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-24 17:28:37,963 p=9271 u=root n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-24 17:28:37,964 p=9271 u=root n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-24 17:28:37,965 p=9271 u=root n=ansible INFO| setting up inventory plugins
+2025-04-24 17:28:38,204 p=9271 u=root n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-24 17:28:38,226 p=9271 u=root n=ansible INFO| host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:28:38,226 p=9271 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:28:38,227 p=9271 u=root n=ansible INFO| script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:28:38,227 p=9271 u=root n=ansible INFO| auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:28:38,227 p=9271 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:28:38,228 p=9271 u=root n=ansible INFO| yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:28:38,228 p=9271 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:28:38,228 p=9271 u=root n=ansible INFO| ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:28:38,228 p=9271 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:28:38,228 p=9271 u=root n=ansible INFO| toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:28:38,229 p=9271 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-24 17:28:38,237 p=9271 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-04-24 17:28:38,395 p=9271 u=root n=ansible INFO| Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+2025-04-24 17:28:38,416 p=9271 u=root n=ansible INFO| Attempting to use 'default' callback.
+2025-04-24 17:28:38,416 p=9271 u=root n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-24 17:28:38,418 p=9271 u=root n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-24 17:28:38,418 p=9271 u=root n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-24 17:28:38,419 p=9271 u=root n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-24 17:28:38,419 p=9271 u=root n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-24 17:28:38,419 p=9271 u=root n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-24 17:28:38,419 p=9271 u=root n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-24 17:28:38,419 p=9271 u=root n=ansible INFO| PLAYBOOK: playbook.yml **************************************************************************************************************
+2025-04-24 17:28:38,419 p=9271 u=root n=ansible INFO| 1 plays in playbook.yml
+2025-04-24 17:28:38,424 p=9271 u=root n=ansible INFO| PLAY [Generate YAML from Jinja2 template] *******************************************************************************************
+2025-04-24 17:28:38,446 p=9271 u=root n=ansible INFO| TASK [Check if /opt/docker-compose.yml is a symlink] ********************************************************************************
+2025-04-24 17:28:38,446 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:15
+2025-04-24 17:28:38,485 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:38,488 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:38,518 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296 `" && echo ansible-tmp-1745515718.5161264-9274-7187882430296="` echo /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296 `" ) && sleep 0'
+2025-04-24 17:28:38,883 p=9271 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:28:38,884 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:28:38,894 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:28:38,894 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:28:38,895 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:28:38,895 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:28:38,896 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:28:38,897 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:28:38,898 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:28:38,899 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:28:38,900 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:28:38,900 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:28:38,901 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:28:38,903 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:28:38,903 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:28:38,904 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:28:38,908 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:28:38,912 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:28:38,914 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:28:38,914 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:28:38,915 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:28:38,917 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:28:38,917 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:28:38,918 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:28:38,919 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:28:38,919 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:28:38,919 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:28:38,925 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:28:38,932 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmpg7a4ychb TO /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296/AnsiballZ_stat.py
+2025-04-24 17:28:38,933 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296/ /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:28:38,977 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:28:39,434 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515718.5161264-9274-7187882430296/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:39,484 p=9271 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/opt/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "atime": 1745515133.1878564,
+        "attr_flags": "",
+        "attributes": [],
+        "block_size": 4096,
+        "blocks": 0,
+        "charset": "binary",
+        "ctime": 1745515133.1788561,
+        "dev": 2053,
+        "device_type": 0,
+        "executable": true,
+        "exists": true,
+        "gid": 0,
+        "gr_name": "root",
+        "inode": 12736910,
+        "isblk": false,
+        "ischr": false,
+        "isdir": false,
+        "isfifo": false,
+        "isgid": false,
+        "islnk": true,
+        "isreg": false,
+        "issock": false,
+        "isuid": false,
+        "lnk_source": "/opt/config.yml",
+        "lnk_target": "/opt/config.yml",
+        "mimetype": "inode/symlink",
+        "mode": "0777",
+        "mtime": 1745515133.1788561,
+        "nlink": 1,
+        "path": "/opt/docker-compose.yml",
+        "pw_name": "root",
+        "readable": true,
+        "rgrp": true,
+        "roth": true,
+        "rusr": true,
+        "size": 15,
+        "uid": 0,
+        "version": null,
+        "wgrp": true,
+        "woth": true,
+        "writeable": true,
+        "wusr": true,
+        "xgrp": true,
+        "xoth": true,
+        "xusr": true
+    }
+}
+2025-04-24 17:28:39,492 p=9271 u=root n=ansible INFO| TASK [Remove symlink /opt/docker-compose.yml] ***************************************************************************************
+2025-04-24 17:28:39,492 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:21
+2025-04-24 17:28:39,540 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:39,543 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:39,573 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210 `" && echo ansible-tmp-1745515719.5716488-9291-64850692573210="` echo /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210 `" ) && sleep 0'
+2025-04-24 17:28:39,859 p=9271 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:28:39,859 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:28:39,867 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:28:39,869 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:28:39,872 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:28:39,873 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:28:39,877 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:28:39,877 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:28:39,879 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:28:39,881 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:28:39,882 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:28:39,883 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:28:39,886 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:28:39,887 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:28:39,887 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:28:39,890 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:28:39,894 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:28:39,895 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:28:39,895 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:28:39,898 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:28:39,899 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:28:39,899 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:28:39,902 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:28:39,905 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:28:39,909 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:28:39,912 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:28:39,913 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:28:39,915 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:28:39,917 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmp6d_en_r3 TO /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210/AnsiballZ_file.py
+2025-04-24 17:28:39,920 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210/ /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:39,962 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:40,548 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515719.5716488-9291-64850692573210/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:40,600 p=9271 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        }
+    },
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "path": "/opt/docker-compose.yml",
+    "state": "absent"
+}
+2025-04-24 17:28:40,610 p=9271 u=root n=ansible INFO| TASK [Create YAML file from Jinja2 template] ****************************************************************************************
+2025-04-24 17:28:40,612 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:28
+2025-04-24 17:28:40,638 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:40,643 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:40,681 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456 `" && echo ansible-tmp-1745515720.676546-9306-270455886048456="` echo /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456 `" ) && sleep 0'
+2025-04-24 17:28:40,739 p=9271 u=root n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/templates/config_template.yml.j2"
+2025-04-24 17:28:40,739 p=9271 u=root n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/config_template.yml.j2"
+2025-04-24 17:28:40,764 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:28:40,768 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmpxoj9mo6a TO /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/AnsiballZ_stat.py
+2025-04-24 17:28:40,770 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/ /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:28:40,807 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:28:41,471 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:28:41,478 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmp1b8o49j2 TO /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/AnsiballZ_file.py
+2025-04-24 17:28:41,480 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/ /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:41,521 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:41,953 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515720.676546-9306-270455886048456/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:42,004 p=9271 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "checksum": "8eaf56d760211f7a574e6e46b5d3388676915db6",
+    "dest": "/opt/config.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "config_template.yml.j2",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/config.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-24 17:28:42,009 p=9271 u=root n=ansible INFO| TASK [Set permissions for config.yml] ***********************************************************************************************
+2025-04-24 17:28:42,009 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:33
+2025-04-24 17:28:42,047 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:42,050 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:42,075 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588 `" && echo ansible-tmp-1745515722.073372-9327-78757893857588="` echo /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588 `" ) && sleep 0'
+2025-04-24 17:28:42,144 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:28:42,148 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmpwire7nbg TO /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588/AnsiballZ_file.py
+2025-04-24 17:28:42,149 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588/ /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:42,192 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:42,845 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515722.073372-9327-78757893857588/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:42,883 p=9271 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": "0755",
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-24 17:28:42,891 p=9271 u=root n=ansible INFO| TASK [Create a symbolic link] *******************************************************************************************************
+2025-04-24 17:28:42,892 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:38
+2025-04-24 17:28:42,931 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:42,934 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:42,965 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722 `" && echo ansible-tmp-1745515722.9616733-9342-142483049597722="` echo /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722 `" ) && sleep 0'
+2025-04-24 17:28:43,028 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:28:43,031 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmpcneln0v1 TO /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722/AnsiballZ_file.py
+2025-04-24 17:28:43,033 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722/ /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:43,073 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:28:43,621 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515722.9616733-9342-142483049597722/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:43,670 p=9271 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "dest": "/opt/docker-compose.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/docker-compose.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": "/opt/config.yml",
+            "state": "link",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0777",
+    "owner": "root",
+    "secontext": "unconfined_u:object_r:usr_t:s0",
+    "size": 15,
+    "src": "/opt/config.yml",
+    "state": "link",
+    "uid": 0
+}
+2025-04-24 17:28:43,677 p=9271 u=root n=ansible INFO| TASK [Verify symbolic link creation] ************************************************************************************************
+2025-04-24 17:28:43,678 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:44
+2025-04-24 17:28:43,707 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:43,710 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:43,757 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402 `" && echo ansible-tmp-1745515723.7534719-9357-168258724583402="` echo /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402 `" ) && sleep 0'
+2025-04-24 17:28:44,117 p=9271 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:28:44,118 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:28:44,131 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:28:44,133 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:28:44,133 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:28:44,133 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:28:44,133 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:28:44,133 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:28:44,133 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:28:44,136 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:28:44,143 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:28:44,145 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:28:44,145 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:28:44,145 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:28:44,145 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:28:44,145 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:28:44,145 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:28:44,146 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:28:44,146 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:28:44,148 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:28:44,149 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:28:44,149 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:28:44,149 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:28:44,151 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:28:44,151 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:28:44,151 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:28:44,155 p=9271 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:28:44,161 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/command.py
+2025-04-24 17:28:44,162 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmpdnp_cwml TO /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402/AnsiballZ_command.py
+2025-04-24 17:28:44,162 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402/ /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402/AnsiballZ_command.py && sleep 0'
+2025-04-24 17:28:44,203 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402/AnsiballZ_command.py && sleep 0'
+2025-04-24 17:28:44,607 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515723.7534719-9357-168258724583402/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:44,653 p=9271 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "cmd": [
+        "ls",
+        "-l",
+        "/opt/docker-compose.yml"
+    ],
+    "delta": "0:00:00.016837",
+    "end": "2025-04-24 17:28:44.562494",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls -l /opt/docker-compose.yml",
+            "_uses_shell": false,
+            "argv": null,
+            "chdir": null,
+            "creates": null,
+            "executable": null,
+            "expand_argument_vars": true,
+            "removes": null,
+            "stdin": null,
+            "stdin_add_newline": true,
+            "strip_empty_ends": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "start": "2025-04-24 17:28:44.545657",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "lrwxrwxrwx. 1 root root 15 Apr 24 17:28 /opt/docker-compose.yml -> /opt/config.yml",
+    "stdout_lines": [
+        "lrwxrwxrwx. 1 root root 15 Apr 24 17:28 /opt/docker-compose.yml -> /opt/config.yml"
+    ]
+}
+2025-04-24 17:28:44,661 p=9271 u=root n=ansible INFO| TASK [Check if the symbolic link points to the correct target] **********************************************************************
+2025-04-24 17:28:44,662 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:48
+2025-04-24 17:28:44,707 p=9271 u=root n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link was created successfully and points to: lrwxrwxrwx. 1 root root 15 Apr 24 17:28 /opt/docker-compose.yml -> /opt/config.yml"
+}
+2025-04-24 17:28:44,714 p=9271 u=root n=ansible INFO| TASK [Verify symbolic link creation using stat] *************************************************************************************
+2025-04-24 17:28:44,715 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:53
+2025-04-24 17:28:44,756 p=9271 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:28:44,759 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:28:44,784 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146 `" && echo ansible-tmp-1745515724.7810411-9374-11411041403146="` echo /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146 `" ) && sleep 0'
+2025-04-24 17:28:44,849 p=9271 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:28:44,851 p=9271 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9271rnn0ndf8/tmpfekqrkxs TO /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146/AnsiballZ_stat.py
+2025-04-24 17:28:44,856 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146/ /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:28:44,891 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:28:45,345 p=9271 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515724.7810411-9374-11411041403146/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:28:45,392 p=9271 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/path/to/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "exists": false
+    }
+}
+2025-04-24 17:28:45,398 p=9271 u=root n=ansible INFO| TASK [Check if the symbolic link exists] ********************************************************************************************
+2025-04-24 17:28:45,399 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:58
+2025-04-24 17:28:45,446 p=9271 u=root n=ansible INFO| skipping: [localhost] => {
+    "false_condition": "link_stat.stat.exists"
+}
+2025-04-24 17:28:45,454 p=9271 u=root n=ansible INFO| TASK [Check if the symbolic link is indeed a link] **********************************************************************************
+2025-04-24 17:28:45,455 p=9271 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:63
+2025-04-24 17:28:45,505 p=9271 u=root n=ansible INFO| fatal: [localhost]: FAILED! => {
+    "msg": "The conditional check 'link_stat.stat.islnk' failed. The error was: error while evaluating conditional (link_stat.stat.islnk): 'dict object' has no attribute 'islnk'\n\nThe error appears to be in '/root/test_template/playbook.yml': line 63, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Check if the symbolic link is indeed a link\n      ^ here\n"
+}
+2025-04-24 17:28:45,512 p=9271 u=root n=ansible INFO| PLAY RECAP **************************************************************************************************************************
+2025-04-24 17:28:45,513 p=9271 u=root n=ansible INFO| localhost                  : ok=8    changed=3    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-04-24 17:29:51,561 p=9412 u=root n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-24 17:29:51,566 p=9412 u=root n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-24 17:29:51,567 p=9412 u=root n=ansible INFO| setting up inventory plugins
+2025-04-24 17:29:51,778 p=9412 u=root n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-24 17:29:51,801 p=9412 u=root n=ansible INFO| host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:29:51,802 p=9412 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:29:51,802 p=9412 u=root n=ansible INFO| script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:29:51,802 p=9412 u=root n=ansible INFO| auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:29:51,803 p=9412 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:29:51,803 p=9412 u=root n=ansible INFO| yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:29:51,804 p=9412 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:29:51,805 p=9412 u=root n=ansible INFO| ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:29:51,806 p=9412 u=root n=ansible INFO| Skipping due to inventory source not existing or not being readable by the current user
+2025-04-24 17:29:51,806 p=9412 u=root n=ansible INFO| toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-24 17:29:51,808 p=9412 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-24 17:29:51,819 p=9412 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-04-24 17:29:52,026 p=9412 u=root n=ansible INFO| Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+2025-04-24 17:29:52,055 p=9412 u=root n=ansible INFO| Attempting to use 'default' callback.
+2025-04-24 17:29:52,058 p=9412 u=root n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-24 17:29:52,058 p=9412 u=root n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-24 17:29:52,060 p=9412 u=root n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-24 17:29:52,061 p=9412 u=root n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-24 17:29:52,061 p=9412 u=root n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-24 17:29:52,063 p=9412 u=root n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-24 17:29:52,064 p=9412 u=root n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-24 17:29:52,070 p=9412 u=root n=ansible INFO| PLAYBOOK: playbook.yml **************************************************************************************************************
+2025-04-24 17:29:52,070 p=9412 u=root n=ansible INFO| 1 plays in playbook.yml
+2025-04-24 17:29:52,074 p=9412 u=root n=ansible INFO| PLAY [Generate YAML from Jinja2 template] *******************************************************************************************
+2025-04-24 17:29:52,096 p=9412 u=root n=ansible INFO| TASK [Check if /opt/docker-compose.yml is a symlink] ********************************************************************************
+2025-04-24 17:29:52,096 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:15
+2025-04-24 17:29:52,135 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:52,139 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:52,168 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124 `" && echo ansible-tmp-1745515792.1653976-9415-77584096791124="` echo /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124 `" ) && sleep 0'
+2025-04-24 17:29:52,544 p=9412 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:29:52,545 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:29:52,559 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:29:52,560 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:29:52,560 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:29:52,560 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:29:52,561 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:29:52,564 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:29:52,565 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:29:52,573 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:29:52,574 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:29:52,575 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:29:52,575 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:29:52,575 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:29:52,576 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:29:52,576 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:29:52,578 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:29:52,578 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:29:52,579 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:29:52,579 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:29:52,579 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:29:52,587 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:29:52,587 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:29:52,588 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:29:52,588 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:29:52,588 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:29:52,595 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:29:52,602 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:29:52,605 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmpmzxo_wxz TO /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124/AnsiballZ_stat.py
+2025-04-24 17:29:52,607 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124/ /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:29:52,643 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:29:53,142 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515792.1653976-9415-77584096791124/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:53,192 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/opt/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "atime": 1745515723.5677638,
+        "attr_flags": "",
+        "attributes": [],
+        "block_size": 4096,
+        "blocks": 0,
+        "charset": "binary",
+        "ctime": 1745515723.5597637,
+        "dev": 2053,
+        "device_type": 0,
+        "executable": true,
+        "exists": true,
+        "gid": 0,
+        "gr_name": "root",
+        "inode": 12736908,
+        "isblk": false,
+        "ischr": false,
+        "isdir": false,
+        "isfifo": false,
+        "isgid": false,
+        "islnk": true,
+        "isreg": false,
+        "issock": false,
+        "isuid": false,
+        "lnk_source": "/opt/config.yml",
+        "lnk_target": "/opt/config.yml",
+        "mimetype": "inode/symlink",
+        "mode": "0777",
+        "mtime": 1745515723.5597637,
+        "nlink": 1,
+        "path": "/opt/docker-compose.yml",
+        "pw_name": "root",
+        "readable": true,
+        "rgrp": true,
+        "roth": true,
+        "rusr": true,
+        "size": 15,
+        "uid": 0,
+        "version": null,
+        "wgrp": true,
+        "woth": true,
+        "writeable": true,
+        "wusr": true,
+        "xgrp": true,
+        "xoth": true,
+        "xusr": true
+    }
+}
+2025-04-24 17:29:53,199 p=9412 u=root n=ansible INFO| TASK [Remove symlink /opt/docker-compose.yml] ***************************************************************************************
+2025-04-24 17:29:53,200 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:21
+2025-04-24 17:29:53,253 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:53,256 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:53,283 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373 `" && echo ansible-tmp-1745515793.2813885-9432-205421604764373="` echo /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373 `" ) && sleep 0'
+2025-04-24 17:29:53,545 p=9412 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:29:53,564 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:29:53,575 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:29:53,576 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:29:53,577 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:29:53,578 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:29:53,578 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:29:53,581 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:29:53,582 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:29:53,586 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:29:53,587 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:29:53,588 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:29:53,588 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:29:53,590 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:29:53,591 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:29:53,592 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:29:53,594 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:29:53,596 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:29:53,599 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:29:53,600 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:29:53,600 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:29:53,606 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:29:53,608 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:29:53,608 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:29:53,609 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:29:53,609 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:29:53,613 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:29:53,621 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:29:53,623 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmp96ijavmn TO /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373/AnsiballZ_file.py
+2025-04-24 17:29:53,624 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373/ /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:53,662 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:54,134 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515793.2813885-9432-205421604764373/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:54,196 p=9412 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        }
+    },
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "path": "/opt/docker-compose.yml",
+    "state": "absent"
+}
+2025-04-24 17:29:54,202 p=9412 u=root n=ansible INFO| TASK [Create YAML file from Jinja2 template] ****************************************************************************************
+2025-04-24 17:29:54,202 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:28
+2025-04-24 17:29:54,239 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:54,241 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:54,278 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922 `" && echo ansible-tmp-1745515794.2756085-9447-233158840626922="` echo /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922 `" ) && sleep 0'
+2025-04-24 17:29:54,341 p=9412 u=root n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/templates/config_template.yml.j2"
+2025-04-24 17:29:54,343 p=9412 u=root n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/config_template.yml.j2"
+2025-04-24 17:29:54,361 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:29:54,367 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmpjf8u_q_2 TO /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/AnsiballZ_stat.py
+2025-04-24 17:29:54,372 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/ /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:29:54,499 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:29:55,132 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:29:55,136 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmp6nulfne1 TO /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/AnsiballZ_file.py
+2025-04-24 17:29:55,139 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/ /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:55,183 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:55,696 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515794.2756085-9447-233158840626922/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:55,752 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "checksum": "8eaf56d760211f7a574e6e46b5d3388676915db6",
+    "dest": "/opt/config.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "config_template.yml.j2",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/config.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-24 17:29:55,757 p=9412 u=root n=ansible INFO| TASK [Set permissions for config.yml] ***********************************************************************************************
+2025-04-24 17:29:55,757 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:33
+2025-04-24 17:29:55,795 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:55,796 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:55,827 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121 `" && echo ansible-tmp-1745515795.82455-9468-178283198942121="` echo /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121 `" ) && sleep 0'
+2025-04-24 17:29:55,892 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:29:55,893 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmpz7kvqlhh TO /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121/AnsiballZ_file.py
+2025-04-24 17:29:55,897 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121/ /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:55,936 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:56,597 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515795.82455-9468-178283198942121/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:56,643 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": "0755",
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-24 17:29:56,648 p=9412 u=root n=ansible INFO| TASK [Create a symbolic link] *******************************************************************************************************
+2025-04-24 17:29:56,650 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:38
+2025-04-24 17:29:56,682 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:56,684 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:56,713 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699 `" && echo ansible-tmp-1745515796.7117438-9483-4571259773699="` echo /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699 `" ) && sleep 0'
+2025-04-24 17:29:56,776 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-24 17:29:56,781 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmplke42owk TO /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699/AnsiballZ_file.py
+2025-04-24 17:29:56,783 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699/ /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:56,826 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699/AnsiballZ_file.py && sleep 0'
+2025-04-24 17:29:57,308 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515796.7117438-9483-4571259773699/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:57,355 p=9412 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "dest": "/opt/docker-compose.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/docker-compose.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": "/opt/config.yml",
+            "state": "link",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0777",
+    "owner": "root",
+    "secontext": "unconfined_u:object_r:usr_t:s0",
+    "size": 15,
+    "src": "/opt/config.yml",
+    "state": "link",
+    "uid": 0
+}
+2025-04-24 17:29:57,361 p=9412 u=root n=ansible INFO| TASK [Verify symbolic link creation] ************************************************************************************************
+2025-04-24 17:29:57,362 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:44
+2025-04-24 17:29:57,404 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:57,407 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:57,432 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699 `" && echo ansible-tmp-1745515797.4298427-9498-152348728536699="` echo /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699 `" ) && sleep 0'
+2025-04-24 17:29:57,787 p=9412 u=root n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-24 17:29:57,788 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-24 17:29:57,798 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-24 17:29:57,799 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-24 17:29:57,800 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-24 17:29:57,800 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-24 17:29:57,801 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-24 17:29:57,803 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-24 17:29:57,804 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-24 17:29:57,805 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-24 17:29:57,806 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-24 17:29:57,808 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-24 17:29:57,809 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-24 17:29:57,812 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-24 17:29:57,812 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-24 17:29:57,813 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-24 17:29:57,816 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-24 17:29:57,816 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-24 17:29:57,817 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-24 17:29:57,817 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-24 17:29:57,818 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-24 17:29:57,823 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-24 17:29:57,824 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-24 17:29:57,824 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-24 17:29:57,825 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-24 17:29:57,826 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-24 17:29:57,830 p=9412 u=root n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-24 17:29:57,836 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/command.py
+2025-04-24 17:29:57,837 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmpvrw89y_h TO /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699/AnsiballZ_command.py
+2025-04-24 17:29:57,839 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699/ /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699/AnsiballZ_command.py && sleep 0'
+2025-04-24 17:29:57,879 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699/AnsiballZ_command.py && sleep 0'
+2025-04-24 17:29:58,300 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515797.4298427-9498-152348728536699/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:58,344 p=9412 u=root n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "cmd": [
+        "ls",
+        "-l",
+        "/opt/docker-compose.yml"
+    ],
+    "delta": "0:00:00.029995",
+    "end": "2025-04-24 17:29:58.256541",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls -l /opt/docker-compose.yml",
+            "_uses_shell": false,
+            "argv": null,
+            "chdir": null,
+            "creates": null,
+            "executable": null,
+            "expand_argument_vars": true,
+            "removes": null,
+            "stdin": null,
+            "stdin_add_newline": true,
+            "strip_empty_ends": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "start": "2025-04-24 17:29:58.226546",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "lrwxrwxrwx. 1 root root 15 Apr 24 17:29 /opt/docker-compose.yml -> /opt/config.yml",
+    "stdout_lines": [
+        "lrwxrwxrwx. 1 root root 15 Apr 24 17:29 /opt/docker-compose.yml -> /opt/config.yml"
+    ]
+}
+2025-04-24 17:29:58,352 p=9412 u=root n=ansible INFO| TASK [Check if the symbolic link points to the correct target] **********************************************************************
+2025-04-24 17:29:58,352 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:48
+2025-04-24 17:29:58,407 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link was created successfully and points to: lrwxrwxrwx. 1 root root 15 Apr 24 17:29 /opt/docker-compose.yml -> /opt/config.yml"
+}
+2025-04-24 17:29:58,413 p=9412 u=root n=ansible INFO| TASK [Verify symbolic link creation using stat] *************************************************************************************
+2025-04-24 17:29:58,413 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:53
+2025-04-24 17:29:58,445 p=9412 u=root n=ansible INFO| <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+2025-04-24 17:29:58,448 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+2025-04-24 17:29:58,479 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570 `" && echo ansible-tmp-1745515798.4747608-9515-143262340663570="` echo /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570 `" ) && sleep 0'
+2025-04-24 17:29:58,537 p=9412 u=root n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-24 17:29:58,540 p=9412 u=root n=ansible INFO| <127.0.0.1> PUT /root/.ansible/tmp/ansible-local-9412oi5nqdr2/tmpvdacyg13 TO /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570/AnsiballZ_stat.py
+2025-04-24 17:29:58,545 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570/ /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:29:58,583 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.12 /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570/AnsiballZ_stat.py && sleep 0'
+2025-04-24 17:29:59,186 p=9412 u=root n=ansible INFO| <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1745515798.4747608-9515-143262340663570/ > /dev/null 2>&1 && sleep 0'
+2025-04-24 17:29:59,237 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/opt/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "atime": 1745515797.1916285,
+        "attr_flags": "",
+        "attributes": [],
+        "block_size": 4096,
+        "blocks": 0,
+        "charset": "binary",
+        "ctime": 1745515797.1896284,
+        "dev": 2053,
+        "device_type": 0,
+        "executable": true,
+        "exists": true,
+        "gid": 0,
+        "gr_name": "root",
+        "inode": 12736908,
+        "isblk": false,
+        "ischr": false,
+        "isdir": false,
+        "isfifo": false,
+        "isgid": false,
+        "islnk": true,
+        "isreg": false,
+        "issock": false,
+        "isuid": false,
+        "lnk_source": "/opt/config.yml",
+        "lnk_target": "/opt/config.yml",
+        "mimetype": "inode/symlink",
+        "mode": "0777",
+        "mtime": 1745515797.1896284,
+        "nlink": 1,
+        "path": "/opt/docker-compose.yml",
+        "pw_name": "root",
+        "readable": true,
+        "rgrp": true,
+        "roth": true,
+        "rusr": true,
+        "size": 15,
+        "uid": 0,
+        "version": null,
+        "wgrp": true,
+        "woth": true,
+        "writeable": true,
+        "wusr": true,
+        "xgrp": true,
+        "xoth": true,
+        "xusr": true
+    }
+}
+2025-04-24 17:29:59,245 p=9412 u=root n=ansible INFO| TASK [Check if the symbolic link exists] ********************************************************************************************
+2025-04-24 17:29:59,245 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:58
+2025-04-24 17:29:59,287 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link exists."
+}
+2025-04-24 17:29:59,295 p=9412 u=root n=ansible INFO| TASK [Check if the symbolic link is indeed a link] **********************************************************************************
+2025-04-24 17:29:59,295 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:63
+2025-04-24 17:29:59,343 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link is valid."
+}
+2025-04-24 17:29:59,348 p=9412 u=root n=ansible INFO| TASK [Check if the symbolic link points to the correct target] **********************************************************************
+2025-04-24 17:29:59,349 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:68
+2025-04-24 17:29:59,396 p=9412 u=root n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link points to: /opt/config.yml"
+}
+2025-04-24 17:29:59,406 p=9412 u=root n=ansible INFO| TASK [Fail if the symbolic link does not point to the expected target] **************************************************************
+2025-04-24 17:29:59,406 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:73
+2025-04-24 17:29:59,446 p=9412 u=root n=ansible INFO| skipping: [localhost] => {
+    "changed": false,
+    "false_condition": "link_stat.stat.exists and link_stat.stat.islnk and link_stat.stat.lnk_target != '/opt/config.yml'",
+    "skip_reason": "Conditional result was False"
+}
+2025-04-24 17:29:59,450 p=9412 u=root n=ansible INFO| TASK [Fail if the symbolic link does not exist] *************************************************************************************
+2025-04-24 17:29:59,450 p=9412 u=root n=ansible INFO| task path: /root/test_template/playbook.yml:78
+2025-04-24 17:29:59,484 p=9412 u=root n=ansible INFO| skipping: [localhost] => {
+    "changed": false,
+    "false_condition": "not link_stat.stat.exists",
+    "skip_reason": "Conditional result was False"
+}
+2025-04-24 17:29:59,488 p=9412 u=root n=ansible INFO| PLAY RECAP **************************************************************************************************************************
+2025-04-24 17:29:59,488 p=9412 u=root n=ansible INFO| localhost                  : ok=11   changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-04-27 06:37:15,070 p=4694 u=root n=ansible INFO| ansible [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-27 06:37:15,073 p=4694 u=root n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-27 06:37:15,075 p=4694 u=root n=ansible INFO| setting up inventory plugins
+2025-04-27 06:37:15,183 p=4694 u=root n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-27 06:37:15,191 p=4694 u=root n=ansible INFO| host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:37:15,192 p=4694 u=root n=ansible INFO| script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:37:15,192 p=4694 u=root n=ansible INFO| auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:37:15,207 p=4694 u=root n=ansible INFO| toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:37:15,207 p=4694 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /etc/ansible/hosts with yaml plugin: YAML inventory has invalid structure, it should be a dictionary,
+got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2025-04-27 06:37:15,208 p=4694 u=root n=ansible INFO|   File "/usr/local/lib/python3.12/site-packages/ansible/inventory/manager.py", line 292, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/local/lib/python3.12/site-packages/ansible/plugins/inventory/yaml.py", line 111, in parse
+    raise AnsibleParserError('YAML inventory has invalid structure, it should be a dictionary, got: %s' % type(data))
+
+2025-04-27 06:37:15,208 p=4694 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /etc/ansible/hosts with ini plugin: /etc/ansible/hosts:1: Expected key=value host variable assignment,
+got: localhost
+
+2025-04-27 06:37:15,208 p=4694 u=root n=ansible INFO|   File "/usr/local/lib/python3.12/site-packages/ansible/inventory/manager.py", line 292, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/local/lib/python3.12/site-packages/ansible/plugins/inventory/ini.py", line 137, in parse
+    raise AnsibleParserError(e)
+
+2025-04-27 06:37:15,209 p=4694 u=root n=ansible WARNING| [WARNING]: Unable to parse /etc/ansible/hosts as an inventory source
+
+2025-04-27 06:37:15,210 p=4694 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-27 06:37:15,217 p=4694 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-04-27 06:37:15,272 p=4694 u=root n=ansible INFO| Loading callback plugin minimal of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/minimal.py
+2025-04-27 06:37:15,290 p=4694 u=root n=ansible INFO| Attempting to use 'default' callback.
+2025-04-27 06:37:15,290 p=4694 u=root n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-27 06:37:15,290 p=4694 u=root n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-27 06:37:15,290 p=4694 u=root n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-27 06:37:15,290 p=4694 u=root n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-27 06:37:15,291 p=4694 u=root n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-27 06:37:15,291 p=4694 u=root n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-27 06:37:15,291 p=4694 u=root n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-27 06:39:22,709 p=4727 u=root n=ansible INFO| ansible-inventory [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-inventory
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-27 06:39:22,710 p=4727 u=root n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-27 06:39:22,711 p=4727 u=root n=ansible INFO| setting up inventory plugins
+2025-04-27 06:39:22,833 p=4727 u=root n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-27 06:39:22,850 p=4727 u=root n=ansible INFO| host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:39:22,850 p=4727 u=root n=ansible INFO| script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:39:22,850 p=4727 u=root n=ansible INFO| auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:39:22,856 p=4727 u=root n=ansible INFO| toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:39:22,857 p=4727 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /etc/ansible/hosts with yaml plugin: YAML inventory has invalid structure, it should be a dictionary,
+got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2025-04-27 06:39:22,858 p=4727 u=root n=ansible INFO|   File "/usr/local/lib/python3.12/site-packages/ansible/inventory/manager.py", line 292, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/local/lib/python3.12/site-packages/ansible/plugins/inventory/yaml.py", line 111, in parse
+    raise AnsibleParserError('YAML inventory has invalid structure, it should be a dictionary, got: %s' % type(data))
+
+2025-04-27 06:39:22,858 p=4727 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /etc/ansible/hosts with ini plugin: /etc/ansible/hosts:1: Expected key=value host variable assignment,
+got: localhost
+
+2025-04-27 06:39:22,858 p=4727 u=root n=ansible INFO|   File "/usr/local/lib/python3.12/site-packages/ansible/inventory/manager.py", line 292, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/local/lib/python3.12/site-packages/ansible/plugins/inventory/ini.py", line 137, in parse
+    raise AnsibleParserError(e)
+
+2025-04-27 06:39:22,859 p=4727 u=root n=ansible WARNING| [WARNING]: Unable to parse /etc/ansible/hosts as an inventory source
+
+2025-04-27 06:39:22,859 p=4727 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-27 06:39:22,869 p=4727 u=root n=ansible INFO| {
+    "_meta": {
+        "hostvars": {}
+    },
+    "all": {
+        "children": [
+            "ungrouped"
+        ]
+    }
+}
+2025-04-27 06:55:51,779 p=4825 u=root n=ansible INFO| ansible-inventory [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-inventory
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-27 06:55:51,779 p=4825 u=root n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-27 06:55:51,780 p=4825 u=root n=ansible INFO| setting up inventory plugins
+2025-04-27 06:55:51,920 p=4825 u=root n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-27 06:55:51,940 p=4825 u=root n=ansible INFO| host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:55:51,940 p=4825 u=root n=ansible INFO| script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:55:51,940 p=4825 u=root n=ansible INFO| auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:55:51,945 p=4825 u=root n=ansible INFO| toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2025-04-27 06:55:51,946 p=4825 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /etc/ansible/hosts with yaml plugin: YAML inventory has invalid structure, it should be a dictionary,
+got: <class 'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2025-04-27 06:55:51,946 p=4825 u=root n=ansible INFO|   File "/usr/local/lib/python3.12/site-packages/ansible/inventory/manager.py", line 292, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/local/lib/python3.12/site-packages/ansible/plugins/inventory/yaml.py", line 111, in parse
+    raise AnsibleParserError('YAML inventory has invalid structure, it should be a dictionary, got: %s' % type(data))
+
+2025-04-27 06:55:51,947 p=4825 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /etc/ansible/hosts with ini plugin: /etc/ansible/hosts:1: Expected key=value host variable assignment,
+got: localhost
+
+2025-04-27 06:55:51,947 p=4825 u=root n=ansible INFO|   File "/usr/local/lib/python3.12/site-packages/ansible/inventory/manager.py", line 292, in parse_source
+    plugin.parse(self._inventory, self._loader, source, cache=cache)
+  File "/usr/local/lib/python3.12/site-packages/ansible/plugins/inventory/ini.py", line 137, in parse
+    raise AnsibleParserError(e)
+
+2025-04-27 06:55:51,947 p=4825 u=root n=ansible WARNING| [WARNING]: Unable to parse /etc/ansible/hosts as an inventory source
+
+2025-04-27 06:55:51,947 p=4825 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-27 06:55:51,955 p=4825 u=root n=ansible INFO| {
+    "_meta": {
+        "hostvars": {}
+    },
+    "all": {
+        "children": [
+            "ungrouped"
+        ]
+    }
+}
+2025-04-27 07:11:22,047 p=5298 u=rundeck n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/var/lib/rundeck/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /var/lib/rundeck/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-27 07:11:22,047 p=5298 u=rundeck n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-27 07:11:22,047 p=5298 u=rundeck n=ansible INFO| setting up inventory plugins
+2025-04-27 07:11:22,226 p=5298 u=rundeck n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-27 07:11:22,236 p=5298 u=rundeck n=ansible INFO| host_list declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:11:22,245 p=5298 u=rundeck n=ansible INFO| auto declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:11:22,246 p=5298 u=rundeck n=ansible INFO| yaml declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:11:22,246 p=5298 u=rundeck n=ansible INFO| Set default localhost to localhost
+2025-04-27 07:11:22,247 p=5298 u=rundeck n=ansible INFO| Parsed /root/test_template/inventory.ini inventory source with ini plugin
+2025-04-27 07:11:22,320 p=5298 u=rundeck n=ansible INFO| Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Attempting to use 'default' callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| PLAYBOOK: playbook.yml *********************************************************
+2025-04-27 07:11:22,330 p=5298 u=rundeck n=ansible INFO| 1 plays in /root/test_template/playbook.yml
+2025-04-27 07:11:22,331 p=5298 u=rundeck n=ansible INFO| PLAY [Generate YAML from Jinja2 template] **************************************
+2025-04-27 07:11:22,339 p=5298 u=rundeck n=ansible INFO| TASK [Check if /opt/docker-compose.yml is a symlink] ***************************
+2025-04-27 07:11:22,339 p=5298 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:17
+2025-04-27 07:11:22,355 p=5298 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:11:22,356 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:11:22,375 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780 `" && echo ansible-tmp-1745737882.3741245-5306-102576289147780="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780 `" ) && sleep 0'
+2025-04-27 07:11:22,585 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-27 07:11:22,585 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-27 07:11:22,589 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-27 07:11:22,590 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-27 07:11:22,591 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-27 07:11:22,591 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-27 07:11:22,592 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-27 07:11:22,592 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-27 07:11:22,592 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-27 07:11:22,596 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-27 07:11:22,596 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-27 07:11:22,596 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-27 07:11:22,596 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-27 07:11:22,597 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-27 07:11:22,598 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-27 07:11:22,598 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-27 07:11:22,600 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-27 07:11:22,601 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-27 07:11:22,602 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-27 07:11:22,602 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-27 07:11:22,602 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-27 07:11:22,607 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-27 07:11:22,608 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-27 07:11:22,608 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-27 07:11:22,608 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-27 07:11:22,609 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-27 07:11:22,611 p=5298 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-27 07:11:22,614 p=5298 u=rundeck n=ansible INFO| <localhost> Attempting python interpreter discovery
+2025-04-27 07:11:22,614 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo PLATFORM; uname; echo FOUND; command -v '"'"'python3.13'"'"'; command -v '"'"'python3.12'"'"'; command -v '"'"'python3.11'"'"'; command -v '"'"'python3.10'"'"'; command -v '"'"'python3.9'"'"'; command -v '"'"'python3.8'"'"'; command -v '"'"'/usr/bin/python3'"'"'; command -v '"'"'python3'"'"'; echo ENDFOUND && sleep 0'
+2025-04-27 07:11:22,655 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '/usr/bin/python3.12 && sleep 0'
+2025-04-27 07:11:22,729 p=5298 u=rundeck n=ansible INFO| <localhost> Python interpreter discovery fallback (unsupported Linux distribution: rocky)
+2025-04-27 07:11:22,732 p=5298 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-27 07:11:22,733 p=5298 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-52980vdlip1p/tmpurkb7e_b TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780/AnsiballZ_stat.py
+2025-04-27 07:11:22,734 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780/AnsiballZ_stat.py && sleep 0'
+2025-04-27 07:11:22,763 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-wdhikrfdldkdxvyaoanfaqoinaxrrzeh ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780/AnsiballZ_stat.py'"'"' && sleep 0'
+2025-04-27 07:11:22,797 p=5298 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737882.3741245-5306-102576289147780/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:11:22,836 p=5298 u=rundeck n=ansible WARNING| [WARNING]: Platform linux on host localhost is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-27 07:11:22,837 p=5298 u=rundeck n=ansible INFO| fatal: [localhost]: FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "module_stderr": "sudo: a password is required\n",
+    "module_stdout": "",
+    "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error",
+    "rc": 1
+}
+2025-04-27 07:11:22,838 p=5298 u=rundeck n=ansible INFO| PLAY RECAP *********************************************************************
+2025-04-27 07:11:22,838 p=5298 u=rundeck n=ansible INFO| localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-27 07:12:26,241 p=5351 u=rundeck n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/var/lib/rundeck/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /var/lib/rundeck/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-27 07:12:26,241 p=5351 u=rundeck n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-27 07:12:26,242 p=5351 u=rundeck n=ansible INFO| setting up inventory plugins
+2025-04-27 07:12:26,390 p=5351 u=rundeck n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-27 07:12:26,402 p=5351 u=rundeck n=ansible INFO| host_list declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:12:26,405 p=5351 u=rundeck n=ansible INFO| auto declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:12:26,406 p=5351 u=rundeck n=ansible INFO| yaml declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:12:26,407 p=5351 u=rundeck n=ansible INFO| Set default localhost to localhost
+2025-04-27 07:12:26,407 p=5351 u=rundeck n=ansible INFO| Parsed /root/test_template/inventory.ini inventory source with ini plugin
+2025-04-27 07:12:26,542 p=5351 u=rundeck n=ansible INFO| Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+2025-04-27 07:12:26,561 p=5351 u=rundeck n=ansible INFO| Attempting to use 'default' callback.
+2025-04-27 07:12:26,561 p=5351 u=rundeck n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-27 07:12:26,561 p=5351 u=rundeck n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-27 07:12:26,561 p=5351 u=rundeck n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-27 07:12:26,561 p=5351 u=rundeck n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-27 07:12:26,562 p=5351 u=rundeck n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-27 07:12:26,562 p=5351 u=rundeck n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-27 07:12:26,562 p=5351 u=rundeck n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-27 07:12:26,562 p=5351 u=rundeck n=ansible INFO| PLAYBOOK: playbook.yml *********************************************************
+2025-04-27 07:12:26,562 p=5351 u=rundeck n=ansible INFO| 1 plays in /root/test_template/playbook.yml
+2025-04-27 07:12:26,565 p=5351 u=rundeck n=ansible INFO| PLAY [Generate YAML from Jinja2 template] **************************************
+2025-04-27 07:12:26,576 p=5351 u=rundeck n=ansible INFO| TASK [Check if /opt/docker-compose.yml is a symlink] ***************************
+2025-04-27 07:12:26,576 p=5351 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:17
+2025-04-27 07:12:26,595 p=5351 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:12:26,595 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:12:26,606 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143 `" && echo ansible-tmp-1745737946.6059535-5357-64084367489143="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143 `" ) && sleep 0'
+2025-04-27 07:12:26,777 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-27 07:12:26,777 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-27 07:12:26,782 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-27 07:12:26,783 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-27 07:12:26,784 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-27 07:12:26,785 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-27 07:12:26,786 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-27 07:12:26,787 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-27 07:12:26,789 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-27 07:12:26,790 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-27 07:12:26,791 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-27 07:12:26,791 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-27 07:12:26,791 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-27 07:12:26,792 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-27 07:12:26,792 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-27 07:12:26,794 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-27 07:12:26,796 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-27 07:12:26,796 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-27 07:12:26,797 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-27 07:12:26,797 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-27 07:12:26,797 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-27 07:12:26,799 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-27 07:12:26,799 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-27 07:12:26,799 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-27 07:12:26,799 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-27 07:12:26,799 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-27 07:12:26,801 p=5351 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-27 07:12:26,804 p=5351 u=rundeck n=ansible INFO| <localhost> Attempting python interpreter discovery
+2025-04-27 07:12:26,805 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo PLATFORM; uname; echo FOUND; command -v '"'"'python3.13'"'"'; command -v '"'"'python3.12'"'"'; command -v '"'"'python3.11'"'"'; command -v '"'"'python3.10'"'"'; command -v '"'"'python3.9'"'"'; command -v '"'"'python3.8'"'"'; command -v '"'"'/usr/bin/python3'"'"'; command -v '"'"'python3'"'"'; echo ENDFOUND && sleep 0'
+2025-04-27 07:12:26,836 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '/usr/bin/python3.12 && sleep 0'
+2025-04-27 07:12:26,900 p=5351 u=rundeck n=ansible INFO| <localhost> Python interpreter discovery fallback (unsupported Linux distribution: rocky)
+2025-04-27 07:12:26,901 p=5351 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-27 07:12:26,903 p=5351 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-535138dnf2zl/tmpgngl6a31 TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143/AnsiballZ_stat.py
+2025-04-27 07:12:26,905 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143/AnsiballZ_stat.py && sleep 0'
+2025-04-27 07:12:26,931 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-zaljqeqwjnbqrxnssekdpgqtqfkhzsha ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143/AnsiballZ_stat.py'"'"' && sleep 0'
+2025-04-27 07:12:26,973 p=5351 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745737946.6059535-5357-64084367489143/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:12:27,005 p=5351 u=rundeck n=ansible WARNING| [WARNING]: Platform linux on host localhost is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-27 07:12:27,005 p=5351 u=rundeck n=ansible INFO| fatal: [localhost]: FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "module_stderr": "sudo: a password is required\n",
+    "module_stdout": "",
+    "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error",
+    "rc": 1
+}
+2025-04-27 07:12:27,006 p=5351 u=rundeck n=ansible INFO| PLAY RECAP *********************************************************************
+2025-04-27 07:12:27,006 p=5351 u=rundeck n=ansible INFO| localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-27 07:14:16,974 p=5442 u=rundeck n=ansible INFO| ansible-playbook [core 2.18.1]
+  config file = /root/test_template/ansible.cfg
+  configured module search path = ['/var/lib/rundeck/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.12/site-packages/ansible
+  ansible collection location = /var/lib/rundeck/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.12.5 (main, Dec  3 2024, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-2)] (/usr/bin/python3.12)
+  jinja version = 3.1.4
+  libyaml = True
+2025-04-27 07:14:16,974 p=5442 u=rundeck n=ansible INFO| Using /root/test_template/ansible.cfg as config file
+2025-04-27 07:14:16,975 p=5442 u=rundeck n=ansible INFO| setting up inventory plugins
+2025-04-27 07:14:17,124 p=5442 u=rundeck n=ansible INFO| Loading collection ansible.builtin from 
+2025-04-27 07:14:17,138 p=5442 u=rundeck n=ansible INFO| host_list declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:14:17,142 p=5442 u=rundeck n=ansible INFO| auto declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:14:17,143 p=5442 u=rundeck n=ansible INFO| yaml declined parsing /root/test_template/inventory.ini as it did not pass its verify_file() method
+2025-04-27 07:14:17,144 p=5442 u=rundeck n=ansible INFO| Set default localhost to localhost
+2025-04-27 07:14:17,145 p=5442 u=rundeck n=ansible INFO| Parsed /root/test_template/inventory.ini inventory source with ini plugin
+2025-04-27 07:14:17,272 p=5442 u=rundeck n=ansible INFO| Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python3.12/site-packages/ansible/plugins/callback/default.py
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Attempting to use 'default' callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Skipping callback 'default', as we already have a stdout callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Attempting to use 'junit' callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Attempting to use 'minimal' callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Skipping callback 'minimal', as we already have a stdout callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Attempting to use 'oneline' callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Skipping callback 'oneline', as we already have a stdout callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| Attempting to use 'tree' callback.
+2025-04-27 07:14:17,296 p=5442 u=rundeck n=ansible INFO| PLAYBOOK: playbook.yml *********************************************************
+2025-04-27 07:14:17,297 p=5442 u=rundeck n=ansible INFO| 1 plays in /root/test_template/playbook.yml
+2025-04-27 07:14:17,299 p=5442 u=rundeck n=ansible INFO| PLAY [Generate YAML from Jinja2 template] **************************************
+2025-04-27 07:14:17,313 p=5442 u=rundeck n=ansible INFO| TASK [Check if /opt/docker-compose.yml is a symlink] ***************************
+2025-04-27 07:14:17,313 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:17
+2025-04-27 07:14:17,329 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:17,330 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:17,346 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148 `" && echo ansible-tmp-1745738057.344697-5448-110164094144148="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148 `" ) && sleep 0'
+2025-04-27 07:14:17,573 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-27 07:14:17,574 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-27 07:14:17,576 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-27 07:14:17,576 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-27 07:14:17,577 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-27 07:14:17,577 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-27 07:14:17,577 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-27 07:14:17,577 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-27 07:14:17,578 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-27 07:14:17,579 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-27 07:14:17,580 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-27 07:14:17,580 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-27 07:14:17,580 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-27 07:14:17,581 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-27 07:14:17,581 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-27 07:14:17,581 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-27 07:14:17,582 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-27 07:14:17,583 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-27 07:14:17,583 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-27 07:14:17,583 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-27 07:14:17,584 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-27 07:14:17,586 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-27 07:14:17,586 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-27 07:14:17,586 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-27 07:14:17,586 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-27 07:14:17,587 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-27 07:14:17,588 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-27 07:14:17,590 p=5442 u=rundeck n=ansible INFO| <localhost> Attempting python interpreter discovery
+2025-04-27 07:14:17,590 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo PLATFORM; uname; echo FOUND; command -v '"'"'python3.13'"'"'; command -v '"'"'python3.12'"'"'; command -v '"'"'python3.11'"'"'; command -v '"'"'python3.10'"'"'; command -v '"'"'python3.9'"'"'; command -v '"'"'python3.8'"'"'; command -v '"'"'/usr/bin/python3'"'"'; command -v '"'"'python3'"'"'; echo ENDFOUND && sleep 0'
+2025-04-27 07:14:17,713 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '/usr/bin/python3.12 && sleep 0'
+2025-04-27 07:14:17,965 p=5442 u=rundeck n=ansible INFO| <localhost> Python interpreter discovery fallback (unsupported Linux distribution: rocky)
+2025-04-27 07:14:17,967 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-27 07:14:17,967 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmp3bqdqu13 TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148/AnsiballZ_stat.py
+2025-04-27 07:14:17,968 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148/AnsiballZ_stat.py && sleep 0'
+2025-04-27 07:14:18,008 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-idksgouvsrcenaxaxhtcctojwdxgnrth ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148/AnsiballZ_stat.py'"'"' && sleep 0'
+2025-04-27 07:14:18,455 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738057.344697-5448-110164094144148/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:18,481 p=5442 u=rundeck n=ansible WARNING| [WARNING]: Platform linux on host localhost is using the discovered Python
+interpreter at /usr/bin/python3.12, but future installation of another Python
+interpreter could change the meaning of that path. See
+https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-27 07:14:18,481 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/opt/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "atime": 1745734835.216588,
+        "attr_flags": "",
+        "attributes": [],
+        "block_size": 4096,
+        "blocks": 0,
+        "charset": "binary",
+        "ctime": 1745515797.1896284,
+        "dev": 2053,
+        "device_type": 0,
+        "executable": true,
+        "exists": true,
+        "gid": 0,
+        "gr_name": "root",
+        "inode": 12736908,
+        "isblk": false,
+        "ischr": false,
+        "isdir": false,
+        "isfifo": false,
+        "isgid": false,
+        "islnk": true,
+        "isreg": false,
+        "issock": false,
+        "isuid": false,
+        "lnk_source": "/opt/config.yml",
+        "lnk_target": "/opt/config.yml",
+        "mimetype": "inode/symlink",
+        "mode": "0777",
+        "mtime": 1745515797.1896284,
+        "nlink": 1,
+        "path": "/opt/docker-compose.yml",
+        "pw_name": "root",
+        "readable": true,
+        "rgrp": true,
+        "roth": true,
+        "rusr": true,
+        "size": 15,
+        "uid": 0,
+        "version": null,
+        "wgrp": true,
+        "woth": true,
+        "writeable": true,
+        "wusr": true,
+        "xgrp": true,
+        "xoth": true,
+        "xusr": true
+    }
+}
+2025-04-27 07:14:18,483 p=5442 u=rundeck n=ansible INFO| TASK [Remove symlink /opt/docker-compose.yml] **********************************
+2025-04-27 07:14:18,483 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:23
+2025-04-27 07:14:18,506 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:18,508 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:18,523 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429 `" && echo ansible-tmp-1745738058.5223985-5478-264031909461429="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429 `" ) && sleep 0'
+2025-04-27 07:14:18,716 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-27 07:14:18,716 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-27 07:14:18,720 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-27 07:14:18,720 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-27 07:14:18,720 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-27 07:14:18,720 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-27 07:14:18,721 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-27 07:14:18,721 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-27 07:14:18,722 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-27 07:14:18,724 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-27 07:14:18,724 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-27 07:14:18,724 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-27 07:14:18,725 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-27 07:14:18,727 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-27 07:14:18,727 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-27 07:14:18,728 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-27 07:14:18,730 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-27 07:14:18,731 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-27 07:14:18,732 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-27 07:14:18,733 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-27 07:14:18,733 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-27 07:14:18,737 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-27 07:14:18,737 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-27 07:14:18,737 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-27 07:14:18,737 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-27 07:14:18,739 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-27 07:14:18,741 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-27 07:14:18,745 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-27 07:14:18,746 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmpnsvqlj98 TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429/AnsiballZ_file.py
+2025-04-27 07:14:18,747 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429/AnsiballZ_file.py && sleep 0'
+2025-04-27 07:14:18,793 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ybcssaxoqcnhrfobrnlkghiamcxdfgkg ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429/AnsiballZ_file.py'"'"' && sleep 0'
+2025-04-27 07:14:19,143 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738058.5223985-5478-264031909461429/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:19,164 p=5442 u=rundeck n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        }
+    },
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "path": "/opt/docker-compose.yml",
+    "state": "absent"
+}
+2025-04-27 07:14:19,172 p=5442 u=rundeck n=ansible INFO| TASK [Create YAML file from Jinja2 template] ***********************************
+2025-04-27 07:14:19,172 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:30
+2025-04-27 07:14:19,186 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:19,187 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:19,218 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169 `" && echo ansible-tmp-1745738059.2176313-5495-250220241333169="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169 `" ) && sleep 0'
+2025-04-27 07:14:19,270 p=5442 u=rundeck n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/templates/config_template.yml.j2"
+2025-04-27 07:14:19,271 p=5442 u=rundeck n=ansible INFO| looking for "templates/config_template.yml.j2" at "/root/test_template/templates/config_template.yml.j2"
+2025-04-27 07:14:19,308 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-27 07:14:19,310 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmpnm1ahjzp TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/AnsiballZ_stat.py
+2025-04-27 07:14:19,310 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/AnsiballZ_stat.py && sleep 0'
+2025-04-27 07:14:19,336 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-qbqdosamkzxziaqwvptyekhksvbfcelo ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/AnsiballZ_stat.py'"'"' && sleep 0'
+2025-04-27 07:14:19,788 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-27 07:14:19,789 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmp3uxmo9vw TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/AnsiballZ_file.py
+2025-04-27 07:14:19,790 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/AnsiballZ_file.py && sleep 0'
+2025-04-27 07:14:19,812 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-fhljawmiwuvvdrragkwzbrzuzhszrytc ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/AnsiballZ_file.py'"'"' && sleep 0'
+2025-04-27 07:14:20,192 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738059.2176313-5495-250220241333169/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:20,223 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "checksum": "8eaf56d760211f7a574e6e46b5d3388676915db6",
+    "dest": "/opt/config.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "config_template.yml.j2",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/config.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-27 07:14:20,226 p=5442 u=rundeck n=ansible INFO| TASK [Set permissions for config.yml] ******************************************
+2025-04-27 07:14:20,226 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:35
+2025-04-27 07:14:20,256 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:20,257 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:20,276 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687 `" && echo ansible-tmp-1745738060.2748146-5520-220319872500687="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687 `" ) && sleep 0'
+2025-04-27 07:14:20,312 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-27 07:14:20,313 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmpz9p14rsl TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687/AnsiballZ_file.py
+2025-04-27 07:14:20,314 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687/AnsiballZ_file.py && sleep 0'
+2025-04-27 07:14:20,330 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ysbgayaodizzqhrixlcblaoozcepvjou ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687/AnsiballZ_file.py'"'"' && sleep 0'
+2025-04-27 07:14:20,789 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.2748146-5520-220319872500687/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:20,808 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/opt/config.yml"
+        },
+        "before": {
+            "path": "/opt/config.yml"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": "0755",
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/config.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0755",
+    "owner": "root",
+    "path": "/opt/config.yml",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 202,
+    "state": "file",
+    "uid": 0
+}
+2025-04-27 07:14:20,811 p=5442 u=rundeck n=ansible INFO| TASK [Create a symbolic link] **************************************************
+2025-04-27 07:14:20,811 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:40
+2025-04-27 07:14:20,839 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:20,840 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:20,859 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062 `" && echo ansible-tmp-1745738060.8582094-5537-244087988797062="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062 `" ) && sleep 0'
+2025-04-27 07:14:20,911 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/file.py
+2025-04-27 07:14:20,913 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmpny69roz2 TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062/AnsiballZ_file.py
+2025-04-27 07:14:20,915 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062/AnsiballZ_file.py && sleep 0'
+2025-04-27 07:14:20,945 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-jghxaujpmssdrvbwwcbgxbevjjacwltx ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062/AnsiballZ_file.py'"'"' && sleep 0'
+2025-04-27 07:14:21,367 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738060.8582094-5537-244087988797062/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:21,405 p=5442 u=rundeck n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "dest": "/opt/docker-compose.yml",
+    "diff": {
+        "after": {
+            "path": "/opt/docker-compose.yml",
+            "state": "link"
+        },
+        "before": {
+            "path": "/opt/docker-compose.yml",
+            "state": "absent"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/opt/docker-compose.yml",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/opt/docker-compose.yml",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": "/opt/config.yml",
+            "state": "link",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0777",
+    "owner": "root",
+    "secontext": "system_u:object_r:usr_t:s0",
+    "size": 15,
+    "src": "/opt/config.yml",
+    "state": "link",
+    "uid": 0
+}
+2025-04-27 07:14:21,414 p=5442 u=rundeck n=ansible INFO| TASK [Verify symbolic link creation] *******************************************
+2025-04-27 07:14:21,414 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:46
+2025-04-27 07:14:21,438 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:21,438 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:21,468 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221 `" && echo ansible-tmp-1745738061.4673462-5554-131288375377221="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221 `" ) && sleep 0'
+2025-04-27 07:14:21,684 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/__init__.py
+2025-04-27 07:14:21,684 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/__init__.py
+2025-04-27 07:14:21,688 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/basic.py
+2025-04-27 07:14:21,688 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/_text.py
+2025-04-27 07:14:21,688 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/_utils.py
+2025-04-27 07:14:21,689 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/__init__.py
+2025-04-27 07:14:21,689 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/arg_spec.py
+2025-04-27 07:14:21,690 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/collections.py
+2025-04-27 07:14:21,690 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/file.py
+2025-04-27 07:14:21,691 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/locale.py
+2025-04-27 07:14:21,693 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/parameters.py
+2025-04-27 07:14:21,693 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/process.py
+2025-04-27 07:14:21,693 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/sys_info.py
+2025-04-27 07:14:21,694 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/converters.py
+2025-04-27 07:14:21,695 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/__init__.py
+2025-04-27 07:14:21,695 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/text/formatters.py
+2025-04-27 07:14:21,696 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/validation.py
+2025-04-27 07:14:21,696 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/common/warnings.py
+2025-04-27 07:14:21,696 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/selinux.py
+2025-04-27 07:14:21,696 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/compat/__init__.py
+2025-04-27 07:14:21,696 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/__init__.py
+2025-04-27 07:14:21,699 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/distro/_distro.py
+2025-04-27 07:14:21,699 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/errors.py
+2025-04-27 07:14:21,700 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/convert_bool.py
+2025-04-27 07:14:21,700 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/parsing/__init__.py
+2025-04-27 07:14:21,700 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/pycompat24.py
+2025-04-27 07:14:21,702 p=5442 u=rundeck n=ansible INFO| Including module_utils file ansible/module_utils/six/__init__.py
+2025-04-27 07:14:21,705 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/command.py
+2025-04-27 07:14:21,707 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmpnb7mxqg0 TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221/AnsiballZ_command.py
+2025-04-27 07:14:21,709 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221/AnsiballZ_command.py && sleep 0'
+2025-04-27 07:14:21,729 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-lklgxrkxddqcrsqutvxlhrrjfvshhrwl ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221/AnsiballZ_command.py'"'"' && sleep 0'
+2025-04-27 07:14:22,149 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738061.4673462-5554-131288375377221/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:22,168 p=5442 u=rundeck n=ansible INFO| changed: [localhost] => {
+    "changed": true,
+    "cmd": [
+        "ls",
+        "-l",
+        "/opt/docker-compose.yml"
+    ],
+    "delta": "0:00:00.008925",
+    "end": "2025-04-27 07:14:22.109460",
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls -l /opt/docker-compose.yml",
+            "_uses_shell": false,
+            "argv": null,
+            "chdir": null,
+            "creates": null,
+            "executable": null,
+            "expand_argument_vars": true,
+            "removes": null,
+            "stdin": null,
+            "stdin_add_newline": true,
+            "strip_empty_ends": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "start": "2025-04-27 07:14:22.100535",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "lrwxrwxrwx. 1 root root 15 Apr 27 07:14 /opt/docker-compose.yml -> /opt/config.yml",
+    "stdout_lines": [
+        "lrwxrwxrwx. 1 root root 15 Apr 27 07:14 /opt/docker-compose.yml -> /opt/config.yml"
+    ]
+}
+2025-04-27 07:14:22,173 p=5442 u=rundeck n=ansible INFO| TASK [Check if the symbolic link points to the correct target] *****************
+2025-04-27 07:14:22,174 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:50
+2025-04-27 07:14:22,197 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link was created successfully and points to: lrwxrwxrwx. 1 root root 15 Apr 27 07:14 /opt/docker-compose.yml -> /opt/config.yml"
+}
+2025-04-27 07:14:22,199 p=5442 u=rundeck n=ansible INFO| TASK [Verify symbolic link creation using stat] ********************************
+2025-04-27 07:14:22,199 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:55
+2025-04-27 07:14:22,231 p=5442 u=rundeck n=ansible INFO| <localhost> ESTABLISH LOCAL CONNECTION FOR USER: rundeck
+2025-04-27 07:14:22,232 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'echo ~rundeck && sleep 0'
+2025-04-27 07:14:22,248 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /var/lib/rundeck/.ansible/tmp `"&& mkdir "` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015 `" && echo ansible-tmp-1745738062.2477362-5573-138423135869015="` echo /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015 `" ) && sleep 0'
+2025-04-27 07:14:22,276 p=5442 u=rundeck n=ansible INFO| Using module file /usr/local/lib/python3.12/site-packages/ansible/modules/stat.py
+2025-04-27 07:14:22,278 p=5442 u=rundeck n=ansible INFO| <localhost> PUT /var/lib/rundeck/.ansible/tmp/ansible-local-5442uekaapu4/tmpfylc_uq4 TO /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015/AnsiballZ_stat.py
+2025-04-27 07:14:22,278 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'chmod u+x /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015/ /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015/AnsiballZ_stat.py && sleep 0'
+2025-04-27 07:14:22,293 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-vdsmfctkhsesthmvaorhhkycyunxittq ; /usr/bin/python3.12 /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015/AnsiballZ_stat.py'"'"' && sleep 0'
+2025-04-27 07:14:22,655 p=5442 u=rundeck n=ansible INFO| <localhost> EXEC /bin/sh -c 'rm -f -r /var/lib/rundeck/.ansible/tmp/ansible-tmp-1745738062.2477362-5573-138423135869015/ > /dev/null 2>&1 && sleep 0'
+2025-04-27 07:14:22,689 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_attributes": true,
+            "get_checksum": true,
+            "get_mime": true,
+            "path": "/opt/docker-compose.yml"
+        }
+    },
+    "stat": {
+        "atime": 1745738061.3186796,
+        "attr_flags": "",
+        "attributes": [],
+        "block_size": 4096,
+        "blocks": 0,
+        "charset": "binary",
+        "ctime": 1745738061.3116796,
+        "dev": 2053,
+        "device_type": 0,
+        "executable": true,
+        "exists": true,
+        "gid": 0,
+        "gr_name": "root",
+        "inode": 12732371,
+        "isblk": false,
+        "ischr": false,
+        "isdir": false,
+        "isfifo": false,
+        "isgid": false,
+        "islnk": true,
+        "isreg": false,
+        "issock": false,
+        "isuid": false,
+        "lnk_source": "/opt/config.yml",
+        "lnk_target": "/opt/config.yml",
+        "mimetype": "inode/symlink",
+        "mode": "0777",
+        "mtime": 1745738061.3116796,
+        "nlink": 1,
+        "path": "/opt/docker-compose.yml",
+        "pw_name": "root",
+        "readable": true,
+        "rgrp": true,
+        "roth": true,
+        "rusr": true,
+        "size": 15,
+        "uid": 0,
+        "version": null,
+        "wgrp": true,
+        "woth": true,
+        "writeable": true,
+        "wusr": true,
+        "xgrp": true,
+        "xoth": true,
+        "xusr": true
+    }
+}
+2025-04-27 07:14:22,692 p=5442 u=rundeck n=ansible INFO| TASK [Check if the symbolic link exists] ***************************************
+2025-04-27 07:14:22,692 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:60
+2025-04-27 07:14:22,735 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link exists."
+}
+2025-04-27 07:14:22,737 p=5442 u=rundeck n=ansible INFO| TASK [Check if the symbolic link is indeed a link] *****************************
+2025-04-27 07:14:22,737 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:65
+2025-04-27 07:14:22,769 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link is valid."
+}
+2025-04-27 07:14:22,771 p=5442 u=rundeck n=ansible INFO| TASK [Check if the symbolic link points to the correct target] *****************
+2025-04-27 07:14:22,771 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:70
+2025-04-27 07:14:22,813 p=5442 u=rundeck n=ansible INFO| ok: [localhost] => {
+    "msg": "The symbolic link points to: /opt/config.yml"
+}
+2025-04-27 07:14:22,821 p=5442 u=rundeck n=ansible INFO| TASK [Fail if the symbolic link does not point to the expected target] *********
+2025-04-27 07:14:22,821 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:75
+2025-04-27 07:14:22,854 p=5442 u=rundeck n=ansible INFO| skipping: [localhost] => {
+    "changed": false,
+    "false_condition": "link_stat.stat.exists and link_stat.stat.islnk and link_stat.stat.lnk_target != '/opt/config.yml'",
+    "skip_reason": "Conditional result was False"
+}
+2025-04-27 07:14:22,855 p=5442 u=rundeck n=ansible INFO| TASK [Fail if the symbolic link does not exist] ********************************
+2025-04-27 07:14:22,856 p=5442 u=rundeck n=ansible INFO| task path: /root/test_template/playbook.yml:80
+2025-04-27 07:14:22,878 p=5442 u=rundeck n=ansible INFO| skipping: [localhost] => {
+    "changed": false,
+    "false_condition": "not link_stat.stat.exists",
+    "skip_reason": "Conditional result was False"
+}
+2025-04-27 07:14:22,880 p=5442 u=rundeck n=ansible INFO| PLAY RECAP *********************************************************************
+2025-04-27 07:14:22,880 p=5442 u=rundeck n=ansible INFO| localhost                  : ok=11   changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   

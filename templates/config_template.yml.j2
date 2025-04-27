@@ -1,0 +1,11 @@
+# config_template.yml.j2
+version: "{{ version }}"
+services:
+  web:
+    image: "{{ web_image }}"
+    ports:
+      - "{{ web_port }}:80"
+  db:
+    image: "{{ db_image }}"
+    environment:
+      MYSQL_ROOT_PASSWORD: "{{ db_root_password }}"
