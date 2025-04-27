@@ -1,0 +1,20 @@
+- defaultTab: nodes
+  description: Ansible Playbook test job
+  executionEnabled: true
+  id: 55bbf52d-3da7-463b-bd3b-fbc2cef6fc9c
+  loglevel: INFO
+  name: Ansible_playbook
+  nodeFilterEditable: false
+  plugins:
+    ExecutionLifecycle: {}
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - description: Start time
+      exec: date
+    - exec: whoami
+    - description: ansible-playbook
+      exec: ANSIBLE_CONFIG=/root/test_template/ansible.cfg ansible-playbook /root/test_template/playbook.yml
+    keepgoing: false
+    strategy: sequential
+  uuid: 55bbf52d-3da7-463b-bd3b-fbc2cef6fc9c
